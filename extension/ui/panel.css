@@ -1,0 +1,52 @@
+/* Lives in a shadow root over the Amazon page, so none of Amazon's styles reach it and none of these leak out. */
+:host {
+  --bg: #f8f7f2; --fg: #1d1f23; --muted: #6a6d73; --line: #d8d6cc; --field: #fff;
+  --accent: #e47911; --accent-fg: #fff; --bad: #c0392b; --good: #2e7d32;
+  all: initial;
+  position: fixed; inset: 0; z-index: 2147483647;
+  display: grid; place-items: center;
+  background: rgb(0 0 0 / .35); backdrop-filter: blur(4px);
+  font: 15px/1.45 system-ui, sans-serif; color: var(--fg);
+  color-scheme: light dark;
+}
+:host([hidden]) { display: none; }
+@media (prefers-color-scheme: dark) {
+  :host { --bg: #111317; --fg: #e8e6df; --muted: #9a9ca2; --line: #2c2f36; --field: #1a1d22; --bad: #ef6f5f; --good: #6fcf73; }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+.panel {
+  position: relative; width: min(520px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto;
+  padding: 20px 22px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 20px 60px rgb(0 0 0 / .35);
+}
+h1 { font-size: 20px; margin: 0 0 2px; }
+.version { font-size: 12px; font-weight: 400; color: var(--muted); margin-left: 4px; }
+.close { position: absolute; top: 12px; right: 12px; border: 0; background: none; font-size: 20px; line-height: 1; padding: 4px 8px; }
+.hint { color: var(--muted); font-size: 13px; margin: 4px 0 10px; }
+label.block { display: block; margin: 12px 0; font-weight: 600; }
+input[type=date], textarea {
+  display: block; width: 100%; margin-top: 4px; padding: 8px; font: inherit; font-weight: 400;
+  color: var(--fg); background: var(--field); border: 1px solid var(--line); border-radius: 6px;
+}
+textarea { font-family: ui-monospace, monospace; resize: vertical; }
+fieldset { border: 0; padding: 0; margin: 12px 0 4px; }
+legend { font-weight: 600; padding: 0; margin-bottom: 4px; }
+.radio { display: inline-flex; gap: 6px; align-items: center; margin-right: 18px; }
+.row { display: flex; gap: 12px; }
+.row label { flex: 1; margin-bottom: 0; }
+.presets { display: flex; gap: 8px; flex-wrap: wrap; }
+button {
+  font: inherit; padding: 6px 12px; border-radius: 6px; cursor: pointer;
+  color: var(--fg); background: var(--field); border: 1px solid var(--line);
+}
+button.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); font-weight: 600; padding: 9px 16px; }
+button:disabled { opacity: .5; cursor: default; }
+.actions { display: flex; gap: 8px; margin-top: 18px; }
+.status { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 14px; }
+progress { width: 100%; height: 8px; accent-color: var(--accent); }
+.now { font-weight: 600; margin: 8px 0; }
+.save, .signin { display: inline-block; margin-bottom: 8px; color: var(--accent); cursor: pointer; }
+.log { margin: 0; padding: 0; list-style-position: inside; color: var(--muted); font-size: 13px; max-height: 220px; overflow: auto; }
+.log .bad { color: var(--bad); }
+.log .good { color: var(--good); }

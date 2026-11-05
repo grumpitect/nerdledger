@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Nerdledger's icon: a till receipt in ink, its total underlined twice in red pen, on the datasheet paper
+       Nerdfader's icon uses. extension/icons/ are rendered from this (and simpler small versions) by
+       tools/render-icons.mjs. -->
+  <defs>
+    <pattern id="grid" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M12 0H0V12" fill="none" stroke="#1f55c9" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="1.5" y="1.5" width="125" height="125" rx="25" fill="#f8f7f2" stroke="#15171b" stroke-width="3"/>
+  <rect x="1.5" y="1.5" width="125" height="125" rx="25" fill="url(#grid)"/>
+  <path d="M34 16H94V108L86 102L78 108L70 102L62 108L54 102L46 108L38 102L34 105Z" fill="#fff" stroke="#15171b"
+        stroke-width="5" stroke-linejoin="round"/>
+  <path d="M44 34H70M44 48H78M44 62H66" stroke="#15171b" stroke-width="5"/>
+  <path d="M44 78H84M44 87H84" stroke="#c21f35" stroke-width="5"/>
+</svg>
