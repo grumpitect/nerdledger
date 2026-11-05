@@ -24,6 +24,8 @@ for what it does and how the pieces fit.
 ## Commands
 
 - `npm test`: unit tests (Node) and end-to-end tests (Playwright Chromium, headless, real network blocked).
+- `./release.sh [patch|minor|major|X.Y.Z]`: tests, version bump, commit, tag, push and a GitHub release with the
+  zip. Only when the user asks for a release.
 - `node tools/render-icons.mjs`: renders `extension/icons/` from `docs/nerdledger-icon.svg` (and simpler small
   versions in the script). Run it after changing the icon.
 - `node tools/screenshot.mjs <folder> [--log]`: screenshots of the dialog, light and dark, to check the layout.

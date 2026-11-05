@@ -16,11 +16,16 @@ It uses the Amazon sign-in your browser already has. It never asks for, sees or 
 
 ## Install
 
-1. Open `chrome://extensions` (in Arc: `arc://extensions`) and turn on **Developer mode**.
-2. Click **Load unpacked** and pick the `extension` folder.
-3. Pin the icon, if you like.
+1. Download the latest **Nerdledger-x.y.z.zip** from
+   [Releases](https://github.com/grumpitect/nerdledger/releases/latest) and unzip it somewhere it can stay.
+2. Open `chrome://extensions` (in Arc: `arc://extensions`) and turn on **Developer mode**.
+3. Click **Load unpacked** and pick the **Nerdledger** folder.
+4. Pin the icon, if you like.
 
-After changing the code, click the reload arrow on the extension's card, then reload the Amazon tab.
+To update, replace the folder with the new one and click the reload arrow on the extension's card.
+
+From a clone of this repo, pick the `extension` folder instead. After changing the code, click the reload arrow on
+the extension's card, then reload the Amazon tab.
 
 ## Use
 
@@ -70,6 +75,12 @@ with, and dates in German, French, Spanish, Italian and Dutch are read too.
 
 The requests are made from inside the Amazon tab, not from an extension page: browsers leave Amazon's SameSite=Lax
 sign-in cookies out of requests from an extension's own pages, so from there you'd look signed out.
+
+## Releases
+
+`./release.sh` (or `./release.sh minor`, `major`, `X.Y.Z`) runs the tests, bumps the version in
+`extension/manifest.json`, commits, tags, pushes and creates the GitHub release with the zip attached. It needs the
+GitHub CLI (`gh`) signed in and a clean tree.
 
 ## Privacy
 
