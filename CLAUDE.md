@@ -1,6 +1,6 @@
 # Nerdledger
 
-A Manifest V3 browser extension (Arc, Chrome) that downloads the user's Amazon invoices, for a time frame or single
+A Manifest V3 browser extension (Dia, Arc, Chrome) that downloads the user's Amazon invoices, for a time frame or single
 order numbers, as one zip. Plain JavaScript, no build step: `extension/` is loaded unpacked as it is. See README.md
 for what it does and how the pieces fit.
 

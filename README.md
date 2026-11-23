@@ -4,7 +4,7 @@
 
 **Your Amazon invoices, for a time frame or single orders, in one zip.**
 
-A small browser extension for Arc, Chrome and other Chromium browsers. Click its icon on any Amazon page, pick a
+A small browser extension for Dia, Arc, Chrome and other Chromium browsers. Click its icon on any Amazon page, pick a
 time frame (or type order numbers), and it reads the invoices of those orders and saves them as one zip.
 
 It uses the Amazon sign-in your browser already has. It never asks for, sees or stores your password.
@@ -18,7 +18,7 @@ It uses the Amazon sign-in your browser already has. It never asks for, sees or 
 
 1. Download the latest **Nerdledger-x.y.z.zip** from
    [Releases](https://github.com/grumpitect/nerdledger/releases/latest) and unzip it somewhere it can stay.
-2. Open `chrome://extensions` (in Arc: `arc://extensions`) and turn on **Developer mode**.
+2. Open `chrome://extensions` (in Dia too; in Arc: `arc://extensions`) and turn on **Developer mode**.
 3. Click **Load unpacked** and pick the **Nerdledger** folder.
 4. Pin the icon, if you like.
 

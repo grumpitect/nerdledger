@@ -52,7 +52,7 @@ notes=$(cat <<NOTES
 
 Download **Nerdledger-$version.zip** below and unzip it somewhere it can stay. Then, once:
 
-1. Open \`arc://extensions\` in Arc (or \`chrome://extensions\` in Chrome, Brave, Edge...).
+1. Open \`chrome://extensions\` in Dia, Chrome, Brave or Edge (in Arc: \`arc://extensions\`).
 2. Turn on **Developer mode**, click **Load unpacked** and choose the **Nerdledger** folder.
 
 To update later, replace the folder with the new one and click the reload arrow on Nerdledger's card.
